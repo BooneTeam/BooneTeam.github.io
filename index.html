@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Ember Starter Kit</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+
+  <script type="text/x-handlebars">
+    <div class="navbar">
+      <div class="navbar-inner">
+        <a class="brand" href="#">Garrett Boones Github on Ember</a>
+        <ul class="nav">
+        <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
+        <li>{{#linkTo 'projects'}}Projects{{/linkTo}}</li>
+        </ul>
+      </div>
+    </div>
+    {{outlet}}
+  </script>
+
+    <script type="text/x-handlebars" data-template-name="about">
+    <div class="about">
+     <div class="row">
+       <div class="span6">This is my first project on Ember.js</div>
+       <div class="span6">I knwo some Ruby and Other Stuff</div>
+     </div>
+    </div>
+  </script>
+
+   <script type="text/x-handlebars" data-template-name="projects">
+    <div class="projects span3">
+      <ul>
+      {{#each model}}
+      <li>{{#linkTo 'project' this}}{{title}}{{/linkTo}}</li>
+       <ul>
+       <li>{{author}}</li>
+       <li>{{date publishedAt}}</li>
+       </ul>
+      {{/each}}
+      </ul>
+     </div>
+     <div class="span9"> {{outlet}} </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="projects/index">
+    <p class="text-warning"> Please select a project</p>
+  </script>
+
+     <script type="text/x-handlebars" data-template-name="project">
+    <div class="project">
+    {{#if isEditing}}
+      {{partial "project/edit"}}
+      <button {{action "doneEditing"}}>Done</button>
+      {{else}}
+      <button {{action "edit"}}>Edit</button>
+      {{/if}}
+      <h1>{{title}}</h1>
+       <h3>{{intro}}</h3>
+       <p>{{extended}}</p>
+     </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="project/_edit">
+    <p>{{view Ember.TextField valueBinding="title"}}</p>
+    <p>{{view Ember.TextArea valueBinding="intro"}}</p>
+    <p>{{view Ember.TextArea valueBinding="extended"}}</p>
+  </script>
+
+
+  <script src="js/libs/jquery-1.9.1.js"></script>
+  <script src="js/libs/handlebars-1.0.0-rc.4.js"></script>
+  <script src="js/libs/ember-1.0.0-rc.6.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/libs/ember-data.js"></script>
+  <script src="js/libs/moment.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>

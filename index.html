@@ -13,10 +13,13 @@
   <script type="text/x-handlebars">
     <div class="navbar">
       <div class="navbar-inner">
-        <a class="brand" href="#">Garrett Boones Github on Ember</a>
+        <a class="brand" href="#">Garrett Boone</a>
         <ul class="nav">
         <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
         <li>{{#linkTo 'projects'}}Projects{{/linkTo}}</li>
+        <li><a href="http://www.booneteam.tumblr.com"><img src="images/tumblr-512.png"></a></li>
+        <li><a href="http://www.linkedin.com/pub/garrett-boone/1b/977/a21"><img id="linkedin" src="images/linkedin.png"></a></li>
+        <li><a href="mailto:garrettaustinboone@gmail.com"><img src="images/mailbox.png"></a></li>
         </ul>
       </div>
     </div>
@@ -26,8 +29,8 @@
     <script type="text/x-handlebars" data-template-name="about">
     <div class="about">
      <div class="row">
-       <div class="span6">This is my first project on Ember.js</div>
-       <div class="span6">I knwo some Ruby and Other Stuff</div>
+       <div class="span12"><h1>I like to build things, I love to learn things</h1></div>
+       <div class="span12">I've recently graduated from Dev Bootcamp in Chicago. It's a 9-week intensive web development training program in a fully immersive environment.</div>
      </div>
     </div>
   </script>
@@ -38,8 +41,10 @@
       {{#each model}}
       <li>{{#linkTo 'project' this}}{{title}}{{/linkTo}}</li>
        <ul>
+       <li><img {{bindAttr src="image"}} alt="Logo"></li>
        <li>{{author}}</li>
        <li>{{date publishedAt}}</li>
+       <li><a {{bindAttr href='url'}}>Website</a></li>
        </ul>
       {{/each}}
       </ul>

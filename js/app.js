@@ -79,11 +79,6 @@ id: 3,
   image: 'images/flash_cards.png',
   url: "http://flashcardstest.herokuapp.com" ,
   publishedAt: new Date('1-10-13')
-	title: "My First Ember App",
-  author: "Garrett Boone",
-  intro: "I Really need a job",
-  extended: "This is an attempt at learning more to get ajob",
-  publishedAt: new Date('7-2-13')
 }];
 
 Ember.Handlebars.registerBoundHelper('date',function(date){

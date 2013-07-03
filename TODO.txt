@@ -21,3 +21,12 @@ Your Ember.js project is almost ready! Here's how to get started:
 == Contact =======================
 
 www.emberjs.com
+
+
+"def factorial(x, y=1) \
+            puts y \
+            return y if x == 1 \
+              y *= x \
+              factorial(x-1,y) \
+            end \
+            -factorial(5)"

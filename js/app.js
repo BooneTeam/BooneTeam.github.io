@@ -10,13 +10,46 @@ App.Router.map(function() {
 		this.resource("project", { path: ':post_id'});
 	});
 	this.resource("about");
+	this.resource("rubyAnswers", function(){
+		this.resource("rubyAnswer", { path: ':answer_id'});
+	});
+	this.resource("basics");
 });
 
 App.IndexRoute = Ember.Route.extend({
 	redirect: function(){
-		this.transitionTo('projects')
+		this.transitionTo('projects');
 	}
-})
+});
+
+App.BasicsRoute = Ember.Route.extend({
+
+});
+
+App.RubyAnswersRoute = Ember.Route.extend({
+	model: function(){
+		return App.Answer.find();
+	}
+});
+
+App.Answer = DS.Model.extend({
+	title: DS.attr('string'),
+	description: DS.attr('string'),
+	gist: DS.attr('string')
+});
+
+App.Answer.FIXTURES = [{
+	id: 1,
+	title: "Factorials",
+	description: "Recursive Factorials",
+	gist: "http://www.github.com/gist"
+},
+{
+	id: 2,
+	title: "Prime Factors",
+	description: "Prime Factorization",
+	gist: "http://www.github.com/gist"
+}];
 
 App.ProjectsRoute = Ember.Route.extend({
 	model: function(){

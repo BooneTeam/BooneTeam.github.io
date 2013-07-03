@@ -1,11 +1,32 @@
 /* Put your CSS here */
 html, body {
     margin: 20px;
+    margin-top:5px;
+}
+
+.navbar .brand{
+	color:black;
+	font-weight: bold;
+	text-shadow:none;
+}
+
+
+
+.navbar-inner{
+	height:60px;
+	line-height: 2.5em;
 }
 
 .nav li{
 	list-style:none;
 	display:inline;
+	line-height: 2.5em;
+}
+
+.navbar .nav > li > a{
+	color:black;
+	font-weight: bold;
+	text-shadow:none;
 }
 
 #linkedin{

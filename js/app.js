@@ -16,8 +16,6 @@ App.Router.map(function() {
 		this.resource("rubyAnswer", { path: ':answer_id'});
 	});
 	this.resource("basics");
-	this.resource("todo");
-	this.resource("events")
 });
 
 //Individual Routes
@@ -29,7 +27,9 @@ App.IndexRoute = Ember.Route.extend({
 });
 
 App.BasicsRoute = Ember.Route.extend({
-
+	model: function(){
+		return App.Basic.find();
+	}
 });
 
 App.RubyAnswersRoute = Ember.Route.extend({
@@ -62,23 +62,56 @@ App.Post = DS.Model.extend({
 	publishedAt: DS.attr('date')
 });
 
+App.Basic = DS.Model.extend({
+	title: DS.attr('string'),
+	url:  DS.attr('string')
+});
 
 // FIXTURES
-	
-	//Answers
+
+	//basics
+
+App.Basic.FIXTURES = [{
+		id:1,
+		title:"Ruby Trivia",
+		url:"https://github.com/gregstallings/ruby-trivia"
+	},
+	{
+		id:2,
+		title:"Always Be Coding",
+		url:"https://medium.com/tech-talk/d5f8051afce2"
+	},
+	{
+		id:3,
+		title:"JS class",
+		url:"http://www.phpied.com/3-ways-to-define-a-javascript-class/"
+		},
+	{
+		id:4,
+		title:"Big O",
+		url:"http://bigocheatsheet.com/"
+	},
+	{
+		id:5,
+		title:"Gentle Intro to Algorithm Complexity Analysis",
+		url: "http://discrete.gr/complexity/"
+	}];
+
+	//answers
 App.Answer.FIXTURES = [{
 	id: 1,
 	title: "Factorials",
 	description: "Recursive Factorials",
-	gist: "http://www.github.com/gist"
+	gist: "https://gist.github.com/BooneTeam/5921637"
 },
 {
 	id: 2,
 	title: "Prime Factors",
-	description: "Prime Factorization",
-	gist: "http://www.github.com/gist"
+	description: "Prime Factorization Recursively",
+	gist: "https://gist.github.com/BooneTeam/5922180"
 }];
-	//Posts - Need to Change to Projects
+	
+	//posts - Need to Change to Projects
 App.Post.FIXTURES = [{
 	id: 1,
 	title: "DBConnect",

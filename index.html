@@ -13,17 +13,17 @@
   <script type="text/x-handlebars">
     <div class="navbar">
       <div class="navbar-inner">
-        <a class="brand" href="#">Garrett Boone</a>
+        <a class="brand" href="#">GARRETT BOONE</a>
         <ul class="nav">
-        <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
-        <li>{{#linkTo 'projects'}}Projects{{/linkTo}}</li>
-        <li><a href="http://www.booneteam.tumblr.com"><img src="images/tumblr-512.png"></a></li>
-        <li><a href="http://www.linkedin.com/pub/garrett-boone/1b/977/a21"><img id="linkedin" src="images/linkedin.png"></a></li>
-        <li><a href="mailto:garrettaustinboone@gmail.com"><img src="images/mailbox.png"></a></li>
-        <li>{{#linkTo 'rubyAnswers'}}Ruby Trivia Answers{{/linkTo}}</li>
-        <li>{{#linkTo 'basics'}}Back To The Basics{{/linkTo}}</li>
-        <li>{{#linkTo 'todo'}}My TODO{{/linkTo}}</li>
-        <li>{{#linkTo 'events'}}Coding Events{{/linkTo}}</li>
+          <li><a href="http://www.booneteam.tumblr.com"><img src="images/tumblr-512.png"></a></li>
+          <li><a href="http://www.linkedin.com/pub/garrett-boone/1b/977/a21"><img id="linkedin" src="images/linkedin.png"></a></li>
+          <li><a href="mailto:garrettaustinboone@gmail.com"><img src="images/mailbox.png"></a></li>
+          </ul>
+          <ul class="nav pull-right">
+          <li>{{#linkTo 'about'}}About{{/linkTo}}</li>
+          <li>{{#linkTo 'projects'}}Projects{{/linkTo}}</li>
+          <li>{{#linkTo 'rubyAnswers'}}Ruby Trivia Answers{{/linkTo}}</li>
+          <li>{{#linkTo 'basics'}}Back To The Basics{{/linkTo}}</li>
         </ul>
       </div>
     </div>
@@ -33,8 +33,10 @@
     <script type="text/x-handlebars" data-template-name="about">
     <div class="about">
      <div class="row">
-       <div class="span12"><h1>I like to build things, I love to learn things</h1></div>
-       <div class="span12">I've recently graduated from Dev Bootcamp in Chicago. It's a 9-week intensive web development training program in a fully immersive environment.</div>
+       <div class="span12"><h1>I built this site to learn more things like Ember</h1><p>( I was told I should learn Ember on July 1st, I built this July 2nd and 3rd Please be kind :) <p></div>
+       <div class="span5">I recently graduated from Dev Bootcamp in Chicago. Dev Bootcamp is a 9-week intensive web development training program in a fully immersive environment. We focused mainly on Ruby on Rails with javascript jQuery and ots of other technologies thrown in the mix.</div>
+       <div class="span5">This is my first app using ember. It is meant to serve as a portfolio of some of my work as well as just practice for me.</div>
+       <div class="span5">My other portfolio website which is built on rails can be visited at <a href="http://www.garrettaustinboone.com">www.garrettaustinboone.com</a></div>
      </div>
     </div>
   </script>
@@ -53,7 +55,7 @@
       {{/each}}
       </ul>
      </div>
-     <div class="span9"> {{outlet}} </div>
+     <div class="span9 hero-unit"> {{outlet}} </div>
   </script>
 
   <script type="text/x-handlebars" data-template-name="projects/index">
@@ -103,6 +105,28 @@
     </div>
   </script>
 
+  <script type="text/x-handlebars" data-template-name="basics">
+   <div class="span3">
+      <ul>
+        {{#each model}}
+        <li>
+        <a {{bindAttr href='url'}}>{{title}}</a>
+        </li>
+        {{/each}}
+   </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="todo">
+    <div class="todo">
+      <p>Make a todo App Here</p>
+    </div>
+  </script>
+
+  <script type="text/x-handlebars" data-template-name="events">
+    <div class="events">
+      <p>Make Calendar of Events</p>
+    </div>
+  </script>
 
   <script src="js/libs/jquery-1.9.1.js"></script>
   <script src="js/libs/handlebars-1.0.0-rc.4.js"></script>

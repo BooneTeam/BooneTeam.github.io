@@ -64,12 +64,6 @@
 
   <script type="text/x-handlebars" data-template-name="project">
     <div class="project">
-    {{#if isEditing}}
-      {{partial "project/edit"}}
-      <button {{action "doneEditing"}}>Done</button>
-      {{else}}
-      <button {{action "edit"}}>Edit</button>
-      {{/if}}
       <h1>{{title}}</h1>
        <h3>{{intro}}</h3>
        <p>{{extended}}</p>

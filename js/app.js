@@ -5,6 +5,8 @@ App.Store = DS.Store.extend({
 	adapter: 'DS.FixtureAdapter'
 });
 
+//Main Resources
+
 App.Router.map(function() {
 	this.resource("projects", function(){
 		this.resource("project", { path: ':post_id'});
@@ -14,7 +16,11 @@ App.Router.map(function() {
 		this.resource("rubyAnswer", { path: ':answer_id'});
 	});
 	this.resource("basics");
+	this.resource("todo");
+	this.resource("events")
 });
+
+//Individual Routes
 
 App.IndexRoute = Ember.Route.extend({
 	redirect: function(){
@@ -32,12 +38,34 @@ App.RubyAnswersRoute = Ember.Route.extend({
 	}
 });
 
+App.ProjectsRoute = Ember.Route.extend({
+	model: function(){
+		return App.Post.find();
+	}
+});
+
+// Models
+
 App.Answer = DS.Model.extend({
 	title: DS.attr('string'),
 	description: DS.attr('string'),
 	gist: DS.attr('string')
 });
 
+App.Post = DS.Model.extend({
+	title: DS.attr('string'),
+	author: DS.attr('string'),
+	intro: DS.attr('string'),
+	extended: DS.attr('string'),
+	image: DS.attr('string'),
+	url: DS.attr('string'),
+	publishedAt: DS.attr('date')
+});
+
+
+// FIXTURES
+	
+	//Answers
 App.Answer.FIXTURES = [{
 	id: 1,
 	title: "Factorials",
@@ -50,34 +78,7 @@ App.Answer.FIXTURES = [{
 	description: "Prime Factorization",
 	gist: "http://www.github.com/gist"
 }];
-
-App.ProjectsRoute = Ember.Route.extend({
-	model: function(){
-		return App.Post.find();
-	}
-});
-
-App.ProjectController = Ember.ObjectController.extend({
-	isEditing: false,
-	doneEditing: function(){
-		this.set('isEditing', false);
-	},
-	edit: function(){
-		this.set('isEditing', true);
-	}
-});
-
-
-App.Post = DS.Model.extend({
-	title: DS.attr('string'),
-	author: DS.attr('string'),
-	intro: DS.attr('string'),
-	extended: DS.attr('string'),
-	image: DS.attr('string'),
-	url: DS.attr('string'),
-	publishedAt: DS.attr('date')
-});
-
+	//Posts - Need to Change to Projects
 App.Post.FIXTURES = [{
 	id: 1,
 	title: "DBConnect",
@@ -114,11 +115,20 @@ id: 3,
   publishedAt: new Date('1-10-13')
 }];
 
+//Controllers
+
+App.ProjectController = Ember.ObjectController.extend({
+	isEditing: false,
+	doneEditing: function(){
+		this.set('isEditing', false);
+	},
+	edit: function(){
+		this.set('isEditing', true);
+	}
+});
+
+// Helpers
+
 Ember.Handlebars.registerBoundHelper('date',function(date){
 	return moment(date).fromNow();
 });
-// App.IndexRoute = Ember.Route.extend({
-//   model: function() {
-//     return ['red', 'yellow', 'blue'];
-//   }
-// });

@@ -1,0 +1,54 @@
+
+@import url(http://fonts.googleapis.com/css?family=Josefin+Slab);
+
+body{
+	font-family:"josefin slab", serif;
+}
+
+a{
+	text-decoration: none !important;
+}
+
+.navbar{
+	background-color: #12617A;
+  width: 200px;
+  height: 700px;
+  float: left;
+}
+
+.navbar-inner{
+	float: left;
+	width: 200px;
+	text-align: center;
+}
+
+.nav{
+	text-align: left;
+  width: 130px;
+}
+
+.navbar .nav > li > a {
+  color: white;
+  font-weight: bold;
+  text-shadow: none;
+  display: block;
+}
+
+.navbar .brand{
+	color:white;
+}
+
+.projects{
+	float:left;
+}
+
+.projects a{
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+.project{
+  float: left;
+  width: 30%;
+  margin: 50px;
+}

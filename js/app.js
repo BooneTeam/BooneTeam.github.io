@@ -119,8 +119,7 @@ App.Post.FIXTURES = [{
   intro:  "DBConnect keeps alumni, students, staff, and employers within reach of each other as we grow. \
   				Whether you're looking for employment or to catch up with an old boot, DBConnect will help continue the collaboration.",
   extended: "This was a final project at DBC and will eventually be used as the new alumni and employer network \
-  				This code needs to be refactored and most of the features are only accesible to approved accounts. \
-					Below are links to a quick walkthrough of the app.",
+  				This code needs to be refactored and most of the features are only accesible to approved accounts.",
   image: 'images/dbconnect.png',
   url: "http://dbconnect.herokuapp.com",
   publishedAt: new Date('6-21-13')

@@ -14,7 +14,7 @@ a{
 	width: 650px;
 }
 
-.center_lists{
+.rubyAnswer{
 	text-align: center;
 }
 
@@ -64,9 +64,9 @@ a{
   width: 30%;
 }
 
-.answers ul{
+.center_lists ul{
 	text-align: center;
 }
-.answers ul li{
+.center_lists ul li{
 	display: inline;
 }

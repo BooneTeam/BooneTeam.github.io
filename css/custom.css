@@ -9,22 +9,27 @@ a{
 	text-decoration: none !important;
 }
 
-.rubyAnswer{
+.about{
+	margin: auto;
+	width: 650px;
+}
+
+.center_lists{
 	text-align: center;
 }
 
 .navbar{
 	background-color: #12617A;
 	border-radius: 10px;
-  width: 200px;
-  height: 700px;
   float: left;
+  height: 700px;
+  width: 200px;
 }
 
 .navbar-inner{
 	float: left;
-	width: 200px;
 	text-align: center;
+	width: 200px;
 }
 
 .nav{
@@ -34,9 +39,9 @@ a{
 
 .navbar .nav > li > a {
   color: white;
+  display: block;
   font-weight: bold;
   text-shadow: none;
-  display: block;
 }
 
 .navbar .brand{
@@ -54,8 +59,8 @@ a{
 
 .project{
   float: left;
-  width: 30%;
   margin: 50px;
+  width: 30%;
 }
 
 .answers ul{

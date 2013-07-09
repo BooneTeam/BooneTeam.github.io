@@ -9,6 +9,10 @@ a{
 	text-decoration: none !important;
 }
 
+.rubyAnswer{
+	text-align: center;
+}
+
 .navbar{
 	background-color: #12617A;
   width: 200px;
@@ -51,4 +55,11 @@ a{
   float: left;
   width: 30%;
   margin: 50px;
+}
+
+ul{
+	text-align: center;
+}
+ul li{
+	display: inline;
 }

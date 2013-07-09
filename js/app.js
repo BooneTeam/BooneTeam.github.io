@@ -121,12 +121,18 @@ App.Answer.FIXTURES = [{
 	title: "Binary Search",
 	description: "Binary Search",
 	gist: "https://gist.github.com/BooneTeam/5953831"
-		},
+	},
 {
 	id: 5,
 	title: "Linear vs Binary Search",
-	description: "Testing Linear Searc Vs. Binary with Fibonacci",
+	description: "Testing Linear Search VS. Binary with Fibonacci",
 	gist: "https://gist.github.com/BooneTeam/5953870"
+  },
+{
+	id: 6,
+	title: "Makin' Enumerables",
+	description: "Recreated a few enumerable methods to better understand them.",
+	gist: "https://gist.github.com/BooneTeam/5956965"
 }];
 
 	//posts - Need to Change to Projects

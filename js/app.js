@@ -133,6 +133,12 @@ App.Answer.FIXTURES = [{
 	title: "Makin' Enumerables",
 	description: "Recreated a few enumerable methods to better understand them.",
 	gist: "https://gist.github.com/BooneTeam/5956965"
+ },
+{
+	id: 7,
+	title: "Github on DBConnect",
+	description: "This is the relevant code used to allow users to choose their top five repos to display on their profile on DBConnect.",
+	gist: "https://gist.github.com/BooneTeam/5961286"
 }];
 
 	//posts - Need to Change to Projects

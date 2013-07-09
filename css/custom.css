@@ -57,9 +57,9 @@ a{
   margin: 50px;
 }
 
-ul{
+.answers ul{
 	text-align: center;
 }
-ul li{
+.answers ul li{
 	display: inline;
 }

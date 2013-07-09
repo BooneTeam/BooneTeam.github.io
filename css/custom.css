@@ -64,6 +64,15 @@ a{
   width: 30%;
 }
 
+.span3 {
+  margin:auto;
+  width: 330px;
+}
+
+.title{
+	text-align: center;
+}
+
 .center_lists ul{
 	text-align: center;
 }

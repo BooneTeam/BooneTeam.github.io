@@ -109,8 +109,14 @@ App.Answer.FIXTURES = [{
 	title: "Prime Factors",
 	description: "Prime Factorization Recursively",
 	gist: "https://gist.github.com/BooneTeam/5922180"
+	},
+{
+	id: 2,
+	title: "Largest Product In a Series",
+	description: "Project Euler Problem 8",
+	gist: "https://gist.github.com/BooneTeam/5953666"
 }];
-	
+
 	//posts - Need to Change to Projects
 App.Post.FIXTURES = [{
 	id: 1,

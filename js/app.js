@@ -124,8 +124,8 @@ App.Answer.FIXTURES = [{
 	},
 {
 	id: 5,
-	title: "Linear vs Binary Search",
-	description: "Testing Linear Search VS. Binary with Fibonacci",
+	title: "Iteration Vs. Recursion",
+	description: "Testing Iteration Vs. Recursion with Fibonacci",
 	gist: "https://gist.github.com/BooneTeam/5953870"
   },
 {

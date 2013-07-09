@@ -115,6 +115,12 @@ App.Answer.FIXTURES = [{
 	title: "Largest Product In a Series",
 	description: "Project Euler Problem 8",
 	gist: "https://gist.github.com/BooneTeam/5953666"
+	},
+{
+	id: 2,
+	title: "Binary Search",
+	description: "Binary Search",
+	gist: "https://gist.github.com/BooneTeam/5953831"
 }];
 
 	//posts - Need to Change to Projects

@@ -139,6 +139,12 @@ App.Answer.FIXTURES = [{
 	title: "Github on DBConnect",
 	description: "This is the relevant code used to allow users to choose their top five repos to display on their profile on DBConnect.",
 	gist: "https://gist.github.com/BooneTeam/5961286"
+	 },
+{
+	id: 7,
+	title: "Student Grades and Sorter",
+	description: "This code can sort students by a given field and averages grades.",
+	gist: "https://gist.github.com/BooneTeam/5971037"
 }];
 
 	//posts - Need to Change to Projects

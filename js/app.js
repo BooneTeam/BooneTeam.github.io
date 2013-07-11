@@ -141,10 +141,16 @@ App.Answer.FIXTURES = [{
 	gist: "https://gist.github.com/BooneTeam/5961286"
 	 },
 {
-	id: 7,
+	id: 8,
 	title: "Student Grades and Sorter",
 	description: "This code can sort students by a given field and averages grades.",
 	gist: "https://gist.github.com/BooneTeam/5971037"
+ },
+{
+	id: 9,
+	title: "Vehicles On The Road Exercise",
+	description: "This code was written by me for practice on OO inheritance.",
+	gist: "https://gist.github.com/BooneTeam/26ab007b90df1844fae2"
 }];
 
 	//posts - Need to Change to Projects

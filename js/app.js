@@ -149,8 +149,14 @@ App.Answer.FIXTURES = [{
 {
 	id: 9,
 	title: "Vehicles On The Road Exercise",
-	description: "This code was written by me for practice on OO inheritance.",
+	description: "This code was written by me for practice on OO inheritance while in DBC.",
 	gist: "https://gist.github.com/BooneTeam/26ab007b90df1844fae2"
+},
+{
+	id: 10,
+	title: "Duplicate Name in Database Exercise",
+	description: "Using a module to create a new name suggestor.",
+	gist: "https://gist.github.com/BooneTeam/6012107"
 }];
 
 	//posts - Need to Change to Projects
